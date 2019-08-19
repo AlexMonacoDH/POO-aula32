@@ -22,19 +22,23 @@
     }
 
     public function calcularAutonomia(){
-        return $this->qtdCombustivel * $this->rendimento;
+        echo 'Autonomia: '.$this->qtdCombustivel * $this->rendimento.' km<br>';
     }
 
     public function mostrarEstado(){
-        echo 'Carro '.$this->placa. ' :<br>';
-        echo $this->qtdCombustivel.' litros no tanque<br>';
+        echo '<br>===============<br>Informações sobre o veículo:<br>';
+        echo 'Placa: '.$this->placa.'<br>';
+        echo 'Nível de combustível: ' .$this->qtdCombustivel.' litros.<br>';
     }
 }
 
     $carro1 = new Carro('POO-1111',50,10,50);
+    $carro1->mostrarEstado();
+    $carro1->calcularAutonomia();
     $carro1->andar(20);
     $carro1->mostrarEstado();
     $carro1->calcularAutonomia();
     $carro1->abastecer(3);
     $carro1->mostrarEstado();
+    $carro1->calcularAutonomia();
 ?>
